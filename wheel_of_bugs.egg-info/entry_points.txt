@@ -1,0 +1,2 @@
+[console_scripts]
+wheel-of-bugs = wheel_of_bugs:main

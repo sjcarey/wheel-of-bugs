@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+wheel_of_bugs.py
+wheel_of_bugs.egg-info/PKG-INFO
+wheel_of_bugs.egg-info/SOURCES.txt
+wheel_of_bugs.egg-info/dependency_links.txt
+wheel_of_bugs.egg-info/entry_points.txt
+wheel_of_bugs.egg-info/requires.txt
+wheel_of_bugs.egg-info/top_level.txt

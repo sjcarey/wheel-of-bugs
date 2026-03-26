@@ -63,23 +63,29 @@ class WheelOfBugs:
             colors.extend(colors)
         colors = colors[:len(self.bugs)]
         
-        # Highlight the selected segment if specified
-        if highlight_segment is not None:
-            edge_colors = ['red' if i == highlight_segment else 'white' for i in range(n_bugs)]
-            linewidths = [4 if i == highlight_segment else 1 for i in range(n_bugs)]
-        else:
-            edge_colors = 'white'
-            linewidths = 1
-        
-        # Create pie chart with rotation
+        # Create pie chart with rotation (without custom edge properties initially)
         wedges, texts = ax.pie(
             angles, 
             labels=self.bugs,
             colors=colors,
             startangle=90 + rotation_angle,
-            textprops={'fontsize': 10, 'weight': 'bold'},
-            wedgeprops={'edgecolor': edge_colors, 'linewidth': linewidths}
+            textprops={'fontsize': 10, 'weight': 'bold'}
         )
+        
+        # Apply highlighting after pie creation if specified
+        if highlight_segment is not None:
+            for i, wedge in enumerate(wedges):
+                if i == highlight_segment:
+                    wedge.set_edgecolor('red')
+                    wedge.set_linewidth(4)
+                else:
+                    wedge.set_edgecolor('white')
+                    wedge.set_linewidth(1)
+        else:
+            # Set default edge properties
+            for wedge in wedges:
+                wedge.set_edgecolor('white')
+                wedge.set_linewidth(1)
         
         # Add center circle for aesthetics
         centre_circle = plt.Circle((0,0), 0.3, fc='white', ec='black', linewidth=2)

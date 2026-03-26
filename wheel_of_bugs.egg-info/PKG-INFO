@@ -33,6 +33,7 @@ Dynamic: requires-dist
 Dynamic: requires-python
 Dynamic: summary
 
+<<<<<<< HEAD
 # 🐛 Wheel of Bugs
 
 A fun and interactive web application that spins a wheel to randomly select software bugs! Perfect for developers who want to add some humor to their debugging sessions or use it as a teaching tool for common programming pitfalls.
@@ -255,8 +256,14 @@ Contributions are welcome! Ideas for improvements:
 
 ## 🙏 Credits
 
-Created with the assistance of GitHub Copilot. Perfect for developers who like to gamify their debugging process!
+This package was developed with the assistance of AI - specifically VSCode GitHub Copilot powered by Claude Sonnet 4. The AI helped design the architecture, implement the spinning wheel animation, create the user interface, and generate comprehensive documentation.
+
+Perfect for developers who like to gamify their debugging process!
 
 ---
 
 **Happy Bug Hunting!** 🐛🎯
+=======
+# wheel_of_bugs
+Web application to determine which bug you are fixing by spinning the wheel
+>>>>>>> bc4630ef76b1e573ebc58b1cbf7f861f3c3a18ec
